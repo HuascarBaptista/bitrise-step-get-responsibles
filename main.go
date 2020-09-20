@@ -95,10 +95,6 @@ func failf(format string, v ...interface{}) {
 
 func stringContainsInArray(branchPart string, allowedKeysSeparated []string) string {
 	for _, allowedKey := range allowedKeysSeparated {
-		fmt.Println(normalize(branchPart))
-		fmt.Println(normalize(allowedKey))
-		fmt.Println(strings.Contains(normalize(branchPart), normalize(allowedKey)))
-		fmt.Println(strings.Contains(normalize(allowedKey), normalize(branchPart)))
 		if strings.Contains(normalize(branchPart), normalize(allowedKey)) {
 			return allowedKey
 		}
